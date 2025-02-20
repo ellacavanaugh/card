@@ -53,7 +53,7 @@ h2 {
     width: 100%;
     height: auto;
     max-width: 100%;
-    animation: expandAndPop 2s forwards;
+    animation: expandAndPop 4s forwards;
 }
 
 #second-animated-png {
@@ -61,7 +61,7 @@ h2 {
     width: 100%;
     height: auto;
     max-width: 100%;
-    animation: appearAndDrip 2s 2s forwards; 
+    animation: appearAndDrip 4s 4s forwards; 
     opacity: 0; 
 }
 
@@ -69,17 +69,20 @@ h2 {
     0% {
         transform: scale(0);
         opacity: 1;
+    
     }
+
     50% {
-        transform: scale(1.5);
-        opacity: 1;
-    }
-    75%{
         transform: scale(1);
         opacity: 1;
     }
+
+    95%{
+        transform: scale(0.8);
+        opacity: 1;
+    }
     100% {
-        transform: scale(0.7);
+        transform: scale(0.8);
         opacity: 0;
     }
 }
@@ -90,11 +93,22 @@ h2 {
         opacity: 1;
     }
     50% {
-        transform: translateY(0);
+        transform: translateY(150px);
         opacity: 1;
     }
+
+    75% {
+        transform: translateY(200px);
+        opacity: 1;
+    }
+
+    90%{
+        transform: translateY(250px);
+        opacity: 1;
+    }
+
     100% {
-        transform: translateY(20px);
+        transform: translateY(300px);
         opacity: 0;
     }
 }
@@ -105,6 +119,9 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 90px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   #gmail{
