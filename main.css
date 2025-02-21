@@ -1,11 +1,19 @@
+html, body {
+    overflow-x: hidden; /* Prevent both horizontal and vertical overflow */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 body {
     background-color: rgb(254, 159, 216);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative;
 }
 
 h1 {
@@ -36,6 +44,7 @@ h2 {
 .card {
     position: relative;
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +54,10 @@ h2 {
 #base-png {
     width: 100%;
     height: auto;
-    max-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #animated-png {
@@ -53,6 +65,7 @@ h2 {
     width: 100%;
     height: auto;
     max-width: 100%;
+    z-index: 10;
     animation: expandAndPop 4s forwards;
 }
 
@@ -61,7 +74,8 @@ h2 {
     width: 100%;
     height: auto;
     max-width: 100%;
-    animation: appearAndDrip 4s 4s forwards; 
+    z-index: 10;
+    animation: appearAndFade 4s 4s forwards; 
     opacity: 0; 
 }
 
@@ -69,50 +83,39 @@ h2 {
     0% {
         transform: scale(0);
         opacity: 1;
-    
     }
-
     50% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    95%{
         transform: scale(0.8);
         opacity: 1;
     }
-    100% {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-}
-
-@keyframes appearAndDrip {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(150px);
-        opacity: 1;
-    }
-
     75% {
-        transform: translateY(200px);
+        transform: scale(0.5);
         opacity: 1;
     }
-
-    90%{
-        transform: translateY(250px);
+    95% {
+        transform: scale(0.5);
         opacity: 1;
     }
-
     100% {
-        transform: translateY(300px);
+        transform: scale(0.5);
         opacity: 0;
     }
 }
 
+@keyframes appearAndFade {
+    0% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
 
 .icon-container {
     display: grid;
@@ -120,9 +123,10 @@ h2 {
     grid-template-rows: auto;
     gap: 90px;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
+    align-items: center; 
+    margin-top: 475px;
+    z-index: 1;
+}
 
   #gmail{
     margin-top: 20px;
@@ -135,4 +139,39 @@ h2 {
 #instagram{
     margin-top: 20px;
 }
+
+#white-page-png {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 5; 
+    animation: expandAndFade 10s forwards
+}
+
+@keyframes expandAndFade {
+    0% {
+        transform: scale(3);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(3);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
   
+
+/* settings for mobile layout */
+@media (max-width: 768px) {}
+body { 
+    font-size: 16px; padding: 10px;
+}
+
+
+
