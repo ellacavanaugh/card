@@ -130,12 +130,32 @@ h2 {
     flex-direction: column;
     align-items: center; 
     gap: 10px;
-   
+    z-index: 6;
+    opacity: 0; /* Initially hidden */
+    animation: showIcons 10s forwards; /* Show after 10 seconds */
+}
+
+@keyframes showIcons {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.icon-container a {
+    display: inline-block; /* Ensure the links are inline-block */
 }
 
 .icon-container svg {
     width: 65px;
     height: 65px; 
+    color: rgb(245, 11, 11);
 }
 
 #white-page-png {
