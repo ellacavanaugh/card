@@ -1,1 +1,5 @@
 ## Documentation
+This project was attempting to deliver my style and personality in a one page business card style website. My website shows my personality by showcasing a bright, bubbly, loud and fun design.
+I feel like my project really stands out because of all the elements of it - you have the bubblegum animation and the fun, personalized comic strip. 
+I used the font fira-sans, a bold, almost blocky font that makes my name and title stand out throughout all the chaos of the rest of the website lol
+My personal branding is always changing based off my mood and interests at the time, which is why this project was difficult for me at first because I didn't know which aesthetic to go with. I truly like most styles of design, from pop art to simplistic to maximalist. I feel like this type of style truly captures me at any point though, it's fun and it's happy, and it's out there. 
