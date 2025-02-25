@@ -70,7 +70,7 @@ h2 {
     max-width: 100%;
     z-index: 10;
     animation: expandAndPop 4s forwards;
-    top: -400px;
+    top: -500px;
 }
 
 #second-animated-png {
@@ -81,7 +81,7 @@ h2 {
     z-index: 10;
     animation: appearAndFade 4s 4s forwards; 
     opacity: 0; 
-    top: -400px;
+    top: -500px;
 }
 
 @keyframes expandAndPop {
@@ -131,8 +131,8 @@ h2 {
     align-items: center; 
     gap: 10px;
     z-index: 6;
-    opacity: 0; /* Initially hidden */
-    animation: showIcons 10s forwards; /* Show after 10 seconds */
+    opacity: 0; 
+    animation: showIcons 10s forwards; 
 }
 
 @keyframes showIcons {
@@ -149,7 +149,7 @@ h2 {
 
 
 .icon-container a {
-    display: inline-block; /* Ensure the links are inline-block */
+    display: inline-block; 
 }
 
 .icon-container svg {
